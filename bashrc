@@ -34,14 +34,13 @@ function _prepend_path()
 
 function _set_path()
 {
-  export PATH=$(_prepend_path /usr/local/go/bin)
+  export PATH=$(_prepend_path $PATH /usr/local/go/bin)
 }
 
 function _set_shortcuts()
 {
   alias scr="screen -dRA -S"
   alias mps="pgrep -fa"
-  alias .="pwd"
   alias ..="cd .."
   alias ...="cd ../.."
   alias la="ls -a"
@@ -71,7 +70,7 @@ function _set_options()
   shopt -s checkwinsize
   shopt -s execfail
 
-  export EDITOR="vim"
+  export EDITOR="/usr/bin/vi"
 }
 
 function _set_prompt()
@@ -87,12 +86,12 @@ function _set_prompt()
   FILTER_VT="sed s/'dev\/src\/github\.com\/youtube\/'/.../"
 
   # Vanitization
-  export SHORT_HOST=${HOSTNAME%%.*}
+  export SHORT_HOST=sougou
 
   if [ "${WINDOW}" ]; then
-    PS1="\[\e[4m\]\$(pwd|${FILTER_HOME}|${FILTER_VT}|${FILTER_DEV})${PROMPT}\[\e[m\] "
+    PS1="\[\e[4m\]\$(pwd|${FILTER_HOME}|${FILTER_VT})${PROMPT}\[\e[m\] "
   else
-    PS1="\[\e[4m\]${SHORT_HOST}: \$(pwd|${FILTER_HOME}|${FILTER_VT}|${FILTER_DEV})${PROMPT}\[\e[m\] "
+    PS1="\[\e[4m\]${SHORT_HOST}: \$(pwd|${FILTER_HOME})${PROMPT}\[\e[m\] "
   fi
   export PS1
   export PROMPT_COMMAND=_set_screen_title

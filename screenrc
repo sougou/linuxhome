@@ -93,6 +93,12 @@ bind 'I' login on
 bind 'O' login off
 bind '}' history
 
+# These commands map F1-F4 to k1-k4
+terminfo * k1=\EOP
+terminfo * k2=\EOQ
+terminfo * k3=\EOR
+terminfo * k4=\EOS
+
 #bind function keys to screen numbers
 bindkey -k k1 select 1
 bindkey -k k2 select 2
@@ -104,14 +110,7 @@ bindkey -k k7 select 7
 bindkey -k k8 select 8
 bindkey -k k9 select 9
 bindkey -k k; select 0
-bindkey -k F3 select 1
-bindkey -k F4 select 2
-bindkey -k F5 select 3
-bindkey -k F6 select 4
-bindkey -k F7 select 5
-bindkey -k F8 select 6
-bindkey -k F9 select 7
-bindkey -k FA select 8
+
 
 
 # Yet another hack:
