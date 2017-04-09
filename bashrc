@@ -114,7 +114,8 @@ function _set_git()
 function _set_vt()
 {
   export GOPATH=${HOME}/dev
-  export MYSQL_FLAVOR=MariaDB
+  export MYSQL_FLAVOR=MySQL56
+  export VT_MYSQL_ROOT=/usr
   pushd ${HOME}/dev/src/github.com/youtube/vitess > /dev/null
   source dev.env
   popd > /dev/null
