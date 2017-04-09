@@ -86,7 +86,7 @@ function _set_prompt()
   FILTER_VT="sed s/'dev\/src\/github\.com\/youtube\/'/.../"
 
   # Vanitization
-  export SHORT_HOST=sougou
+  export SHORT_HOST=${HOSTNAME%%.*}
 
   if [ "${WINDOW}" ]; then
     PS1="\[\e[4m\]\$(pwd|${FILTER_HOME}|${FILTER_VT})${PROMPT}\[\e[m\] "
