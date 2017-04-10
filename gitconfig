@@ -1,0 +1,7 @@
+[user]
+	name = Sugu Sougoumarane
+	email = ssougou@gmail.com
+[core]
+	editor = vi
+[push]
+	default = simple
