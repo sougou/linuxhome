@@ -79,6 +79,10 @@ function! DeleteCurrentBuffer()
   execute "silent! bdelete " . buf_num
 endfunction
 
+" gvim settings
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
 set number
 set backspace=2
 set ai
@@ -106,6 +110,8 @@ au FileType go nmap <buffer> <C-]> <Plug>(go-def)
 au FileType go setlocal ts=2 sw=2
 au FileType text set textwidth=0
 
+let g:go_fmt_command = "goimports"
+
 " Disable preview window for autcomplete
 set completeopt=menu,menuone,longest
 
@@ -122,7 +128,7 @@ set vb t_vb=
 let mapleader=" "
 nnoremap <C-n> :hide bnext<CR>
 nnoremap <C-p> :hide bprev<CR>
-nnoremap <C-_> :call DeleteCurrentBuffer()<CR>
+nnoremap <C-\> :call DeleteCurrentBuffer()<CR>
 nnoremap <Leader>n :cnext<CR>
 nnoremap <Leader>p :cprev<CR>
 nnoremap <Leader><Left> <C-W><Left>

@@ -1,10 +1,7 @@
 [global_config]
   window_state = maximise
 [keybindings]
-  full_screen = None
   help = None
-  paste = <Alt>v
-  zoom_out = <Primary><Shift>underscore
 [layouts]
   [[default]]
     [[[child1]]]
@@ -16,9 +13,6 @@
 [plugins]
 [profiles]
   [[default]]
-    antialias = False
-    background_darkness = 0.85
     background_image = None
-    background_type = transparent
     copy_on_selection = True
-    cursor_color = "#ffffff"
+    foreground_color = "#ffffff"
