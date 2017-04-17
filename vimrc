@@ -144,3 +144,4 @@ nnoremap <Leader>t :GoTest<CR>
 nnoremap <Leader>r :GoReferrers<CR>
 
 inoremap <C-x><C-x> <C-x><C-o>
+inoremap <A-v> <C-r>+

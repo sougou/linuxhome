@@ -2,6 +2,7 @@
   window_state = maximise
 [keybindings]
   help = None
+  paste = <Alt>v
 [layouts]
   [[default]]
     [[[child1]]]
@@ -13,6 +14,7 @@
 [plugins]
 [profiles]
   [[default]]
+    background_color = "#300a24"
     background_image = None
     copy_on_selection = True
     foreground_color = "#ffffff"
