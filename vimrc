@@ -129,6 +129,8 @@ let mapleader=" "
 nnoremap <C-n> :hide bnext<CR>
 nnoremap <C-p> :hide bprev<CR>
 nnoremap <C-\> :call DeleteCurrentBuffer()<CR>
+nnoremap <C-Down> <C-e>
+nnoremap <C-Up> <C-y>
 nnoremap <Leader>n :cnext<CR>
 nnoremap <Leader>p :cprev<CR>
 nnoremap <Leader><Left> <C-W><Left>
@@ -139,9 +141,8 @@ nnoremap <Leader>\| :vs<CR>
 nnoremap <Leader>_ :sp<CR>
 nnoremap <Leader>o :SF 
 nnoremap <Leader>s :SG 
-nnoremap <Leader>b :make<CR>:cw<CR>
+nnoremap <Leader>b :make<CR>:botright cw<CR>
 nnoremap <Leader>t :GoTest<CR>
 nnoremap <Leader>r :GoReferrers<CR>
 
-inoremap <C-x><C-x> <C-x><C-o>
 inoremap <A-v> <C-r>+

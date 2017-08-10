@@ -34,7 +34,7 @@ function _prepend_path()
 
 function _set_path()
 {
-  export PATH=$(_prepend_path $PATH /usr/local/go/bin)
+  export PATH=$(_prepend_path $PATH /home/sougou/bin:/usr/local/go/bin)
 }
 
 function _set_shortcuts()
