@@ -1,15 +1,8 @@
 [global_config]
   window_state = maximise
 [keybindings]
+  help = None
   paste = <Alt>v
-[profiles]
-  [[default]]
-    use_system_font = False
-    font = Monospace 12
-    background_image = None
-    foreground_color = "#ffffff"
-    copy_on_selection = True
-    background_color = "#300a24"
 [layouts]
   [[default]]
     [[[child1]]]
@@ -19,3 +12,11 @@
       parent = ""
       type = Window
 [plugins]
+[profiles]
+  [[default]]
+    background_color = "#300a24"
+    background_image = None
+    copy_on_selection = True
+    font = Monospace 12
+    foreground_color = "#ffffff"
+    use_system_font = False
