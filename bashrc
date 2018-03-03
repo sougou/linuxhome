@@ -83,7 +83,7 @@ function _set_prompt()
   fi
 
   FILTER_HOME="sed s/'\/home\/sougou'/~/"
-  FILTER_VT="sed s/'dev\/src\/github\.com\/youtube\/'/.../"
+  FILTER_VT="sed s/'dev\/src\/vitess\.io\/'/.../"
 
   # Vanitization
   export SHORT_HOST=${HOSTNAME%%.*}
@@ -106,9 +106,7 @@ function _set_screen_title()
 
 function _set_git()
 {
-  if [ -f ~/util/git-completion.bash ]; then
-    source ~/util/git-completion.bash
-  fi
+  alias gci="git commit -s -a"
 }
 
 function _set_vt()
@@ -116,7 +114,7 @@ function _set_vt()
   export GOPATH=${HOME}/dev
   export MYSQL_FLAVOR=MySQL56
   export VT_MYSQL_ROOT=/usr
-  pushd ${HOME}/dev/src/github.com/youtube/vitess > /dev/null
+  pushd ${HOME}/dev/src/vitess.io/vitess > /dev/null
   source dev.env
   popd > /dev/null
 }
