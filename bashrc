@@ -119,6 +119,14 @@ function _set_vt()
   popd > /dev/null
 }
 
+# setup lsyncd to aws
+function _set_lsync()
+{
+  if ! pgrep -fa lsyncd>/dev/null; then
+    lsyncd -rsync /home/sougou/dev/src/vitess.io/rvt planet2:/home/planetscale/dev/src/vitess.io/vitess
+  fi
+}
+
 # make less more friendly for non-text input files, see lesspipe(1)
 function _set_less()
 {

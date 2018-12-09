@@ -83,6 +83,9 @@ endfunction
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
+" tagbar settings
+nnoremap <silent> <F9> :TagbarToggle<CR>
+
 set number
 set backspace=2
 set ai
@@ -101,6 +104,7 @@ set hlsearch
 set hidden
 set shiftwidth=2
 set tabstop=2
+set softtabstop=2
 set expandtab
 set mouse=nvc
 au BufEnter * :syntax sync fromstart
@@ -110,16 +114,20 @@ au FileType go nmap <buffer> <C-]> <Plug>(go-def)
 au FileType go setlocal ts=2 sw=2
 au FileType text set textwidth=0
 
+" go settings
 let g:go_fmt_command = "goimports"
+let g:go_list_type='quickfix'
+let g:go_list_height=10
+let g:go_snippet_engine='automatic'
 
-" Disable preview window for autcomplete
+" ultisnip default tab conflicts with YCM.
+let g:UltiSnipsExpandTrigger="<c-j>"
+
+" Preview window for autocomplete
 set completeopt=menu,menuone,longest
 
 let python_highlight_builtins=1
 let python_highlight_exceptions=1
-
-let g:go_list_type='quickfix'
-let g:go_list_height=10
 
 " No bells
 set vb t_vb=
@@ -138,7 +146,9 @@ nnoremap <Leader><Right> <C-W><Right>
 nnoremap <Leader><Up> <C-W><Up>
 nnoremap <Leader><Down> <C-W><Down>
 nnoremap <Leader>\| :vs<CR>
-nnoremap <Leader>_ :sp<CR>
+nnoremap <Leader>\ :sp<CR>
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 nnoremap <Leader>o :SF 
 nnoremap <Leader>s :SG 
 nnoremap <Leader>b :make<CR>:botright cw<CR>
@@ -146,3 +156,4 @@ nnoremap <Leader>t :GoTest<CR>
 nnoremap <Leader>r :GoReferrers<CR>
 
 inoremap <A-v> <C-r>+
+cnoremap <A-v> <C-r>+
