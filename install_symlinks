@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ln -s linuxhome/bashrc .bashrc
+ln -s linuxhome/vimrc .vimrc
+ln -s linuxhome/gitconfig .gitconfig
+ln -s linuxhome/gvimrc .gvimrc
+ln -s linuxhome/inputrc .inputrc
+ln -s linuxhome/screenrc .screenrc
