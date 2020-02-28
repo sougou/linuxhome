@@ -87,6 +87,7 @@ autocmd GUIEnter * set visualbell t_vb=
 nnoremap <silent> <F9> :TagbarToggle<CR>
 
 set number
+set autowrite
 set backspace=2
 set ai
 set textwidth=0

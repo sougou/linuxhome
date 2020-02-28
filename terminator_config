@@ -17,6 +17,6 @@
     background_color = "#300a24"
     background_image = None
     copy_on_selection = True
-    font = Monospace 11
+    font = Monospace 12
     foreground_color = "#ffffff"
     use_system_font = False

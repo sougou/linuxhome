@@ -111,12 +111,11 @@ function _set_git()
 
 function _set_vt()
 {
-  export GOPATH=${HOME}/dev
-  export MYSQL_FLAVOR=MySQL56
-  export VT_MYSQL_ROOT=/usr
   pushd ${HOME}/dev/src/vitess.io/vitess > /dev/null
-  source dev.env
+  source ~/dev.env
   popd > /dev/null
+  alias vt='cd /home/sougou/dev/src/vitess.io/vitess'
+  alias gd='cd /home/sougou/dev/src/vitess.io/contrib/vdemo'
 }
 
 # setup lsyncd to aws
@@ -149,3 +148,9 @@ function _bash_completion()
 
 # _init calls everything else
 _init
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/sougou/google-cloud-sdk/path.bash.inc' ]; then . '/home/sougou/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/sougou/google-cloud-sdk/completion.bash.inc' ]; then . '/home/sougou/google-cloud-sdk/completion.bash.inc'; fi
