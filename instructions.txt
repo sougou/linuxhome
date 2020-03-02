@@ -1,0 +1,38 @@
+chrome
+firefox
+ssh keys
+archive manager
+gnome tweaks
+hp printer driver
+slack
+vlc
+zoom
+wireguard
+sudo apt-get update
+sudo apt-get install git curl vim-gnome screen tree exuberant-ctags
+git clone git@github.com:sougou/linuxhome.git
+./linuxhome/install_symlinks
+mkdir ~/dev
+Relogin
+Install Go
+
+
+Terminator & config: ~/.config/terminator/config
+	Disable F1 key
+
+Vim addons:
+pathogen https://github.com/tpope/vim-pathogen
+vim-go, gist fixes for vim-go and goimports https://github.com/fatih/vim-go
+Install YouCompleteMe (remember submodules: https://github.com/Valloric/YouCompleteMe#full-installation-guide)
+https://github.com/vim-scripts/Tagbar
+https://github.com/AndrewRadev/splitjoin.vim
+https://github.com/SirVer/ultisnips
+
+MySQL, create anonymous user
+	create user ''@'localhost' identified by '';
+Install client-dev libraries
+Disable and uninstall apparmor
+docker, add user to docker group
+	sudo usermod -aG docker $USER
+Reboot
+Install Vitess

@@ -118,14 +118,6 @@ function _set_vt()
   alias gd='cd /home/sougou/dev/src/vitess.io/contrib/vdemo'
 }
 
-# setup lsyncd to aws
-function _set_lsync()
-{
-  if ! pgrep -fa lsyncd>/dev/null; then
-    lsyncd -rsync /home/sougou/dev/src/vitess.io/rvt planet2:/home/planetscale/dev/src/vitess.io/vitess
-  fi
-}
-
 # make less more friendly for non-text input files, see lesspipe(1)
 function _set_less()
 {
@@ -148,9 +140,3 @@ function _bash_completion()
 
 # _init calls everything else
 _init
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/sougou/google-cloud-sdk/path.bash.inc' ]; then . '/home/sougou/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/sougou/google-cloud-sdk/completion.bash.inc' ]; then . '/home/sougou/google-cloud-sdk/completion.bash.inc'; fi
